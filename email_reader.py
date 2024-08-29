@@ -6,7 +6,7 @@ import pandas as pd
 
 #create a bot for your azure systems from your account and copy paste the following in the place holders
 credentials = ('< client ID >', '< Client Secret (2nd option) >')
-tk = FileSystemTokenBackend(token_path=".", token_filename="o365_token.txt")
+tk = FileSystemTokenBackend(token_path=".", token_filename="token.txt")
 account = Account(credentials,tenant_id="<tenant_id>",token_backend=tk)
 
 if not account.is_authenticated:
