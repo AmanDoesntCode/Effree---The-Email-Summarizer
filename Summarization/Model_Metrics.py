@@ -7,8 +7,8 @@ from tqdm import tqdm
 import torch
 from torch.utils.data import DataLoader, random_split
 # Initialize model and tokenizer
-tokenizer = T5Tokenizer.from_pretrained(r'D:\Programming Files\Innovation Competition\Summarization\fine-tuned-t5')  # Update with your model path
-model = T5ForConditionalGeneration.from_pretrained(r'D:\Programming Files\Innovation Competition\Summarization\fine-tuned-t5')  # Update with your model path
+tokenizer = T5Tokenizer.from_pretrained(r'D:\Programming Files\Innovation Competition\Summarization\Models-T5ft')  # Update with your model path
+model = T5ForConditionalGeneration.from_pretrained(r'D:\Programming Files\Innovation Competition\Summarization\Models-T5ft')  # Update with your model path
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
