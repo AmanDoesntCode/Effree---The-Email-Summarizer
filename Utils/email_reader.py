@@ -1,13 +1,10 @@
 from O365 import Account
 from O365.utils.token import FileSystemTokenBackend
-from O365 import message
-import streamlit as st
 import pandas as pd
 
-#create a bot for your azure systems from your account and copy paste the following in the place holders
-credentials = ('< client ID >', '< Client Secret (2nd option) >')
-tk = FileSystemTokenBackend(token_path=".", token_filename="token.txt")
-account = Account(credentials,tenant_id="<tenant_id>",token_backend=tk)
+credentials = ('a2e45fa4-f770-4f9f-9271-a7d7fa9b83dc', 'Y1O8Q~x6OLVLgju~5dE5gemFFb1awpgDu4B9bbs8')
+tk = FileSystemTokenBackend(token_path=r"D:\Programming Files\Innovation Competition\Authenetication Key", token_filename="o365_token.txt")
+account = Account(credentials,tenant_id="2c5bdaf4-8ff2-4bd9-bd54-7c50ab219590",token_backend=tk)
 
 if not account.is_authenticated:
     # This will open a browser window for interactive authentication if necessary
@@ -31,7 +28,7 @@ def get_mail_dataframe():
     links = []
     senders = []
     ids = []
-    for message in inbox.get_messages(limit=10):
+    for message in inbox.get_messages(limit=30):
         if not message.is_read:
             subjects.append(message.subject)
             email_body = message.get_body_text()
@@ -54,4 +51,4 @@ def mark_as_read(message_id):
     
     
 mail_df = get_mail_dataframe()
-mail_df.to_csv('output.csv', index=False) 
+mail_df.to_csv('Data\Input.csv', index=False) 

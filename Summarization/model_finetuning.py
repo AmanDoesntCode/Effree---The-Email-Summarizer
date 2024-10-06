@@ -8,8 +8,8 @@ from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration, AdamW, get_scheduler
 
 # Set paths to your CSV files
-body_csv_path = 'email_thread_details.csv'
-summary_csv_path = 'email_thread_summaries.csv'
+body_csv_path = r'Data/email_thread_details.csv'
+summary_csv_path = r'Data/email_thread_summaries.csv'
 
 # Define the tokenizer and model
 model_name = 't5-small'
