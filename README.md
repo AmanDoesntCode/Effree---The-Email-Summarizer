@@ -2,6 +2,10 @@
 
 Effree is an intelligent email summarization system that uses transformer-based NLP models to condense lengthy emails into concise, actionable summaries. The project is designed to improve productivity for users handling high-volume inboxes by combining email ingestion, preprocessing, model inference, and structured summary delivery in a scalable pipeline.
 
+# Screenshots
+<img width="1399" height="789" alt="image" src="https://github.com/user-attachments/assets/2a13d5ab-6a7a-46a6-9583-2893736e72df" />
+<img width="1396" height="786" alt="image" src="https://github.com/user-attachments/assets/daa8bd97-0a89-4039-89e0-0e2c0981f1bb" />
+
 ## Features
 
 - Summarizes long emails into short, readable outputs
